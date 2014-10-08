@@ -1,7 +1,7 @@
 <div>
 	<h1><%= @category.title %></h1>
 	
-	<% @category.article_categories.each do |article_categories| %>
+	<% @category.article_categories.order(created_at: :desc).each do |article_categories| %>
 		<p><%= link_to article_categories.article.title, article_categories.article %></p>
 	<% end %>
 </div>
