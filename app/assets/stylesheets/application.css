@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+.label-info a {
+	color: white;
+	font-size: larger;
+}
+
+.article-index {
+	margin-bottom: 40px;
+}
