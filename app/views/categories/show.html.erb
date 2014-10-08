@@ -1,6 +1,7 @@
 <div>
 	<h1><%= @category.title %></h1>
-	
 
+	<% @category.article_categories.each do |article_categories| %>
+		<%= article_categories.article.title %><br><% end %>
 
 </div>

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  resources :categories do
+    resources :title
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -21,8 +21,8 @@ class CategoriesController < ApplicationController
 	end
 
 	private
-		# def article_params
-		# 	params.require(:article).permit(:title, :content, :category_ids => [])
-		# end
+		def category_params
+			params.require(:category).permit(:title, :id)
+		end
 
 end
