@@ -2,12 +2,12 @@
 
 <h2>These are the five most recent articles</h2>
 <% @recent_articles.each do |article| %>
-	<div>
+	<div class="article-index">
 		<h3><%= link_to article.title, article %></h3>
-		<p>Published on <%= article.created_at.strftime(' %b %d, %Y') %></p>
+		<p><em>Published on <%= article.created_at.strftime(' %b %d, %Y') %></em></p>
 		<p>Filed under: <% article.categories.each do |category| %>
-			<%= link_to category.title, category %>
-			<% end %>
+			<span class="label label-info"><%= link_to category.title, category %></span>
+			<% end %>		
 		</p>
 		<p><%= truncate(article.content, length: 100) %></p>
 	</div>
